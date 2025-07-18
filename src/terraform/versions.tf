@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "example-aws-terraform-terraform-state"
-    key            = "example-aws-lambda-template/terraform.tfstate"
+    bucket         = "example-aws-lambda-websocket-terraform-state"
+    key            = "example-aws-lambda-websocket/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "example-aws-terraform-terraform-lock"
+    dynamodb_table = "example-aws-lambda-websocket-terraform-lock"
     encrypt        = true
   }
 
@@ -25,7 +25,7 @@ provider "aws" {
       Environment = var.environment
       Project     = var.project_name
       ManagedBy   = "terraform"
-      Repository  = "example-aws-lambda-template"
+      Repository  = "example-aws-lambda-websocket"
     }
   }
 }
