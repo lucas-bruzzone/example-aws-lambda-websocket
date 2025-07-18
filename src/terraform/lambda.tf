@@ -13,11 +13,11 @@ module "lambda_function" {
   create_role = false
   lambda_role = aws_iam_role.lambda.arn
 
-  environment_variables = {
-    CONNECTIONS_TABLE  = data.terraform_remote_state.websocket_api.outputs.connections_table_name
-    WEBSOCKET_ENDPOINT = data.terraform_remote_state.websocket_api.outputs.websocket_api_endpoint
-    ENVIRONMENT        = var.environment
-  }
+  # environment_variables = {
+  #   CONNECTIONS_TABLE  = data.terraform_remote_state.websocket_api.outputs.connections_table_name
+  #   WEBSOCKET_ENDPOINT = data.terraform_remote_state.websocket_api.outputs.websocket_api_endpoint
+  #   ENVIRONMENT        = var.environment
+  # }
 
   depends_on = [module.lambda_layer]
 
