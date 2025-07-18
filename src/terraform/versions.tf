@@ -3,7 +3,7 @@ terraform {
     bucket         = "example-aws-lambda-websocket-terraform-state"
     key            = "example-aws-lambda-websocket/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "example-aws-lambda-websocket-terraform-lock"
+    dynamodb_table = "example-aws-terraform-terraform-lock"
     encrypt        = true
   }
 
