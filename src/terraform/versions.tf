@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "example-aws-lambda-websocket-terraform-state"
+    bucket         = "example-aws-terraform-terraform-state"
     key            = "example-aws-lambda-websocket/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "example-aws-terraform-terraform-lock"
